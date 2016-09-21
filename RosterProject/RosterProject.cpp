@@ -88,9 +88,19 @@ int main()
 	{
 		cout << "Enter player " << i << "'s number: ";
 		cin >> userInput;
+		while(userInput < 0 || userInput > 99){
+		    cout << "Please enter a number between 0 and 99" << endl;
+		    cout << "Enter player " << i << "'s number: ";
+		    cin >> userInput;
+		}
 		jerseyNumber.push_back(userInput);
 		cout << "Enter player " << i << "'s rating: ";
 		cin >> userInput;
+		while (userInput < 0 || userInput > 9){
+		    cout << "Please enter a number between 0 and 9" << endl;
+		    cout << "Enter player " << i << "'s rating: ";
+		    cin >> userInput;
+		}
 		playerRating.push_back(userInput);
 		cout << endl;
 	}
