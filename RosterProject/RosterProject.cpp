@@ -139,6 +139,7 @@ int main()
 		else if (userInput2 == 'r') {
 			cout << "Enter a rating: ";
 			cin >> pRating;
+			cout << endl;
 			cout << "ABOVE " << pRating << endl;
 			AboveRating(jerseyNumber, playerRating, pRating);
 		}
