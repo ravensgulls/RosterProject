@@ -65,8 +65,12 @@ void UpdateRating(vector<int>& jerseyNumber, vector<int>& playerRating, int jNum
 	cout << endl;
 }
 void AboveRating(const vector<int>& jerseyNumber, const vector<int>& playerRating, int pRating) {
-	cout << "FIXME";
-	cout << endl;
+	for(int i = 0; i < playerRating.size(); i++){
+	    if(playerRating.at(i) > pRating){
+	        cout << "Player" << i+1 << " -- Jersey number: " << jerseyNumber.at(i) << ", Rating: "
+	        << playerRating.at(i) << endl;
+	    }        
+	}
 	cout << endl;
 }
 
