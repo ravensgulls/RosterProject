@@ -13,6 +13,18 @@ Date submitted: 2016/09/20
 #include <string>
 using namespace std;
 
+int LinearSearch(vector<int> jerseyNumber, int numbersSize, int key) {
+   int i = 0;
+   
+   for (i = 0; i < numbersSize; ++i) {
+      if (jerseyNumber.at(i) == key) {
+         return i;
+      }
+   }
+   
+   return -1; /* not found */
+}
+
 void PrintMenu() {
 	cout << "MENU" << endl;
 	cout << "a - Add player" << endl;
@@ -38,7 +50,11 @@ void AddPlayer(vector<int>& jerseyNumber, vector<int>& playerRating, int jNumber
 	cout << endl;
 }
 void RemovePlayer(vector<int>& jerseyNumber, vector<int>& playerRating, int jNumber) {
-	cout << "FIXME";
+	int numbersSize = jerseyNumber.size();
+	int index;
+	index = LinearSearch(jerseyNumber, numbersSize, jNumber);
+	jerseyNumber.erase(jerseyNumber.begin()+index);
+	playerRating.erase(playerRating.begin()+index);
 	cout << endl;
 }
 void UpdateRating(vector<int>& jerseyNumber, vector<int>& playerRating, int jNumber, int pRating) {
