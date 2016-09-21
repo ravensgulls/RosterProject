@@ -58,7 +58,10 @@ void RemovePlayer(vector<int>& jerseyNumber, vector<int>& playerRating, int jNum
 	cout << endl;
 }
 void UpdateRating(vector<int>& jerseyNumber, vector<int>& playerRating, int jNumber, int pRating) {
-	cout << "FIXME";
+	int numberSize = jerseyNumber.size();
+	int index;
+	index = LinearSearch(jerseyNumber, numberSize, jNumber);
+	playerRating.at(index) = pRating;
 	cout << endl;
 }
 void AboveRating(const vector<int>& jerseyNumber, const vector<int>& playerRating, int pRating) {
